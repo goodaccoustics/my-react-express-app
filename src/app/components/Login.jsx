@@ -6,7 +6,10 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const LoginComponent = () => {
-  return <div>Login here!</div>
+  return <div>
+    Login here!
+
+  </div>
 };
 
 export const ConnectedLogin = connect(mapStateToProps)(LoginComponent);
