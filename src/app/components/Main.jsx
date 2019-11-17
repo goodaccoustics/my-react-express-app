@@ -6,6 +6,7 @@ import { store } from '../store';
 import { ConnectedDashBoard } from "./Dashboard";
 import { ConnectedNavigation } from "./Navigation";
 import { ConnectedTaskDetail } from "./TaskDetail";
+import { ConnectedHome } from "./Home";
 import { ConnectedLogin} from "./Login";
 import { history } from "../store/history";
 
@@ -33,6 +34,11 @@ export const Main = () => (
           exact
           path="/task/:id"
           render={RouteGuard(ConnectedTaskDetail)}
+        />
+        <Route
+          exact
+          path="/home"
+          render={() => <ConnectedHome/>}
         />
         <Route
           exact
