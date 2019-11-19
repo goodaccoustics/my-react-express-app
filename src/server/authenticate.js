@@ -35,6 +35,7 @@ export const authenticationRoute = app => {
       return res.status(500).send("Password incorrect");
     }
 
+    console.log("user is: ", user);
     let token = uuid();
 
     authenticationTokens.push({

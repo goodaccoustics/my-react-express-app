@@ -11,7 +11,7 @@ import * as mutations from './mutations';
 export const store = createStore(
   combineReducers({
       session(userSession = defaultState.session || {}, action) {
-        let { type, authenticated, session} = action;
+        let { type, authenticated, session } = action;
         switch (type) {
           case mutations.SET_STATE:
             return {...userSession, id: action.state.session.id};
